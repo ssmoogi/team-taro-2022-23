@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.teleop;
+package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
@@ -50,10 +50,10 @@ public class teleop_drive extends LinearOpMode
          double strafe = gamepad1.left_stick_x;
 
          //determine power for each motor
-         double fl = speed+turn+strafe;
-         double fr = speed-turn-strafe;
-         double br = speed-turn+strafe;
-         double bl = speed+turn-strafe;
+         double fl = turn+speed+strafe;
+         double fr = turn-speed-strafe;
+         double br = turn-speed+strafe;
+         double bl = turn+speed-strafe;
          //double ls = lsfor - lsback;
 
          //set power to motors with range of -1 to 1
